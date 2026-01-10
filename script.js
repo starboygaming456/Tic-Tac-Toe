@@ -4,7 +4,7 @@ let reset = document.getElementById("reset");
 let turn= true;
 
 let petterns = [
-    [0,2,3],
+    [0,1,2],
     [0,3,6],
     [0,4,8],
     [1,4,7],
@@ -30,7 +30,19 @@ boxes.forEach((box)=>{
 })
 
 checkWinner = function(){
-    for(const ele of petterns){
-        console.log(ele);
+    for(const pettern of petterns){
+        let position1 = boxes[pettern[0]].innerText
+        let position2 = boxes[pettern[1]].innerText
+        let position3 = boxes[pettern[2]].innerText
+
+        if(position1 != "" && position2 != "" && position3 != ""){
+            if(position1 === position2 && position2 === position3){
+                console.log("MOUSUMI",position1);
+                boxes.forEach((box)=>{
+                box.disabled = true;
+                })
+                alert(`Congratulations Winer Is : ${position1}`);
+            }
+        }
     }
 }
