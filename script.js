@@ -1,5 +1,9 @@
 let boxes = document.querySelectorAll(".box");
 let reset = document.getElementById("reset");
+let winContainer = document.getElementById("Win");
+let msg = document.getElementById("msg");
+let newBtn = document.getElementById("newBtn");
+let resetBtn = document.getElementById("resetBtn");
 
 let turn= true;
 
@@ -37,12 +41,34 @@ checkWinner = function(){
 
         if(position1 != "" && position2 != "" && position3 != ""){
             if(position1 === position2 && position2 === position3){
-                alert(`Congratulations Winer Is : ${position1}`);
                 console.log("MOUSUMI",position1);
                 boxes.forEach((box)=>{
                 box.disabled = true;
+                winMsg(position1);
                 })
             }
         }
     }
 }
+
+function winMsg(winner){
+    msg.innerText = `Congratulations, Winner Is : ${winner}`;
+    winContainer.classList.remove("hide");
+}
+
+
+newBtn.addEventListener("click",()=>{
+    winContainer.classList.add("hide");
+    boxes.forEach((box)=>{
+        box.innerText = "";
+        box.disabled = false;
+    })
+})
+
+resetBtn.addEventListener("click",()=>{
+    boxes.forEach((box)=>{
+        box.innerText = "";
+        box.disabled = false;
+        winContainer.classList.add("hide");
+    })
+})

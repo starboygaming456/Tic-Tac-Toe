@@ -20,6 +20,7 @@ body,main{
     top: 50%;
     left: 50%;
     gap: 2vmin;
+    margin-top: 2rem;
 }
 
 .box{
@@ -33,3 +34,51 @@ body,main{
     color: rgb(170, 77, 77);
 }
 
+#Win{
+    /* background-color: red; */
+    text-align: center;
+    /* height: 50vmin; */
+}
+#newBtn{
+    background-color: #191913;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 20vmin;
+    transition: opacity 0.8s;
+    cursor: pointer;
+}
+#newBtn:hover{
+    opacity: 0.8;
+}
+
+#newBtn:active{
+    background-color:rgb(72, 62, 62);
+}
+.hide{
+    display: none;
+}
+#msg{
+    color: #ffffc7;
+    margin: 2vmin;
+}
+
+#resetBtn{
+    background-color: #191913;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 20vmin;
+    transition: opacity 0.8s;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+#resetBtn:hover{
+    opacity: 0.8;
+}
+
+#resetBtn:active{
+    background-color: rgb(72, 62, 62);
+}
