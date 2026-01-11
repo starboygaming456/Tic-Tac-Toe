@@ -20,6 +20,7 @@ let petterns = [
 
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
+        resetBtn.classList.remove("hide")
        if(turn === true){
         box.innerText = "O";
         turn = false;
@@ -63,6 +64,7 @@ newBtn.addEventListener("click",()=>{
         box.innerText = "";
         box.disabled = false;
     })
+    resetBtn.classList.add("hide")
 })
 
 resetBtn.addEventListener("click",()=>{
@@ -71,4 +73,5 @@ resetBtn.addEventListener("click",()=>{
         box.disabled = false;
         winContainer.classList.add("hide");
     })
+    resetBtn.classList.add("hide")
 })
