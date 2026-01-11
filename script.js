@@ -37,11 +37,11 @@ checkWinner = function(){
 
         if(position1 != "" && position2 != "" && position3 != ""){
             if(position1 === position2 && position2 === position3){
+                alert(`Congratulations Winer Is : ${position1}`);
                 console.log("MOUSUMI",position1);
                 boxes.forEach((box)=>{
                 box.disabled = true;
                 })
-                alert(`Congratulations Winer Is : ${position1}`);
             }
         }
     }
