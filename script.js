@@ -62,6 +62,7 @@ newBtn.addEventListener("click",()=>{
     boxes.forEach((box)=>{
         box.innerText = "";
         box.disabled = false;
+        turn = true;
     })
 })
 
@@ -70,5 +71,6 @@ resetBtn.addEventListener("click",()=>{
         box.innerText = "";
         box.disabled = false;
         winContainer.classList.add("hide");
+        turn = true;
     })
 })
