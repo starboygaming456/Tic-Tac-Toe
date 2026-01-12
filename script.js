@@ -1,3 +1,4 @@
+let container = document.getElementById("container")
 let boxes = document.querySelectorAll(".box");
 let reset = document.getElementById("reset");
 let winContainer = document.getElementById("Win");
@@ -69,11 +70,21 @@ newBtn.addEventListener("click",()=>{
 })
 
 resetBtn.addEventListener("click",()=>{
+    setTimeout(()=>{
+        boxes.forEach((box)=>{
+            box.style.fontSize = "8vmin";
+            box.innerText = "";
+            box.disabled = false;
+            winContainer.classList.add("hide");
+            resetBtn.classList.add("hide")
+            turn = true;
+        })
+    },300)
+})
+
+resetBtn.addEventListener("dblclick",()=>{
     boxes.forEach((box)=>{
-        box.innerText = "";
-        box.disabled = false;
-        winContainer.classList.add("hide");
-        turn = true;
+        box.style.fontSize = "large";
+        box.innerHTML = "MOUSUMI";
     })
-    resetBtn.classList.add("hide")
 })

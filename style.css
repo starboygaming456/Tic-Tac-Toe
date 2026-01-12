@@ -32,12 +32,11 @@ body,main{
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     background-color: #ffffc7;
     color: rgb(170, 77, 77);
+    font-family: Arial;
 }
 
 #Win{
-    /* background-color: red; */
     text-align: center;
-    /* height: 50vmin; */
 }
 #newBtn{
     background-color: #191913;
@@ -81,4 +80,16 @@ body,main{
 
 #resetBtn:active{
     background-color: rgb(72, 62, 62);
+}
+
+
+@media screen and (max-width: 500px) {
+    #container{
+        width: 90vmin;
+    }
+    .box{
+        height: 25vmin;
+        width: 25vmin;
+        font-size: 12vmin;
+    }
 }
